@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
 
@@ -18,12 +18,68 @@
     <!-- DaisyUI CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        .font-lato {
+            font-family: 'Lato', sans-serif;
+        }
+
+        @media screen and (max-width:1024px) {
+            .form-hide{
+                display: none;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
 
-    <header>
+    <header class="container mx-auto">
+        <nav class="navbar lg:bg-[#F85559] rounded-full p-4 my-5">
 
+            <div class="navbar-start w-[350px] hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-white">
+                    <li><a class="hover:text-white">Home</a></li>
+                    <li><a class="hover:text-white">About Us</a></li>
+                    <li><a class="hover:text-white">Shop</a></li>
+                    <li><a class="hover:text-white">All Fruit</a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-center flex lg:justify-center flex-1">
+                <a href="index.html" class="flex items-center gap-4">
+                    <img class="w-12" src="images/logo.png" alt="">
+                    <h4 class="font-lato text-xl md:text-2xl lg:text-3xl font-bold lg:text-white">Fruit Burst</h4>
+                </a>
+            </div>
+
+            <div class="navbar-end w-[350px]">
+                <div class="form-control form-hide">
+                    <input type="text" placeholder="Search" class="input rounded-full focus:outline-none w-24 md:w-auto" />
+                </div>
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 right-8">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruit</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -33,7 +89,7 @@
     <footer>
 
     </footer>
-    
+
 </body>
 
 </html>
